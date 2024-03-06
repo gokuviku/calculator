@@ -1,25 +1,32 @@
-let tr=''
-const addData = (i)=>{
-  tr+= i;
-  document.getElementById("no").value=tr;
+let tr = ''
+const addData = (i) => {
+  tr += i;
+  let a = tr.charAt(0);
+
+  if (a == '' || a == '+' || a == '*' || a == '/') {
+    tr = '';
+    return;
+  } else {
+    document.getElementById("no").value = tr;
+  }
 }
 
-function getAns(){
+function getAns() {
   let data = document.getElementById("no").value;
   let ans = eval(data);
   document.getElementById("no").value = ans;
-  tr='';
+  tr = '';
 }
-function clrData(){
+function clrData() {
   document.getElementById("no").value = 0;
-  tr='';
+  tr = '';
 }
 
-function remData(){
+function remData() {
   let deta = document.getElementById("no").value;
-   newDeta = deta.toString().slice(0,-1);
-   tr=newDeta;
+  newDeta = deta.toString().slice(0, -1);
+  tr = newDeta;
   document.getElementById("no").value = tr;
 
-}remData()
+} remData()
 
