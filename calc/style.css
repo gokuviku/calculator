@@ -7,7 +7,10 @@
   font-weight: 900;
 
 }
-
+h2{
+  color: black;
+  padding: 1vh;
+}
 .main {
   margin-top: 10vh;
 }
